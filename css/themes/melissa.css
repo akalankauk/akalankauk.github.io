@@ -1,0 +1,201 @@
+/* ==========================================================
+*
+*
+! Vertica - LESS Theme Builder
+*
+*
+========================================================== */
+/* ==========================================================
+! EDIT THE COLORS BELOW
+========================================================== */
+/* ==========================================================
+! GENERAL 
+========================================================== */
+body {
+  background-image: url('../../img/bg-photo.jpg');
+  background-color: #484b6d;
+}
+h1,
+h2 {
+  color: #d4315c;
+}
+
+.color1 {
+   color: #d4315c;
+}
+h3 {
+  color: #484b6d;
+}
+.btn-default {
+  background: #484b6d;
+  border: #484b6d;
+}
+.btn-default:hover {
+  background: #26294b !important;
+}
+.btn-primary {
+  background: #d4315c;
+  border: #d4315c;
+}
+.btn-primary:hover {
+  background: #c3204b !important;
+}
+.btn-secondary {
+  background: #474c58;
+  border: #474c58;
+}
+.btn-secondary:hover {
+  background: #363b47 !important;
+}
+/* ==========================================================
+! Tipography
+========================================================== */
+p {
+  color: #333333;
+}
+.intro-title1 {
+  color: #222222;
+  border-bottom: 1px solid #d4315c;
+}
+.intro-title2 {
+  color: #555555;
+}
+.section-title {
+  color: #373a5c;
+}
+.section-item-title-1 {
+  color: #484b6d;
+}
+/* ==========================================================
+! PAGE LOADER 
+========================================================== */
+#page-loader {
+  background: #373a5c;
+  color: #d4315c;
+}
+/* ==========================================================
+! HEADER COLORS
+========================================================== */
+.top-color {
+  background: #d4315c;
+}
+.top-color1 {
+  background: #d4315c;
+}
+.top-color2 {
+  background: #484b6d;
+}
+.top-color3 {
+  background: #474c58;
+}
+/* ==========================================================
+! SIDE MENU
+========================================================== */
+.side-menu-button {
+  background: #333;
+  opacity: 0.9;
+}
+.side-menu {
+  background: #111;
+}
+.side-menu-nav li a:hover {
+  color: #fff;
+}
+.side-menu-nav li.active a {
+  color: #fff;
+}
+#side-menu-close {
+  color: #fff;
+}
+/* ==========================================================
+! GENERAL CONTENT
+========================================================== */
+/* ==========================================================
+! PROFILE INTRO
+========================================================== */
+.profile-pic {
+  border: 5px solid #d4315c;
+}
+/* ==========================================================
+! TIMELINE PROGRESS
+========================================================== */
+.timeline-wrap {
+  background: #d4315c;
+}
+.line-content {
+  color: #333333;
+}
+/* ==========================================================
+! SECTIONS: EDUCATION AND WORK EXPERIENCE
+========================================================== */
+.graduation-time,
+.job {
+  color: #777777;
+}
+/* ==========================================================
+! SECTION: SKILLS
+========================================================== */
+.progress > .progress-completed {
+  color: #888;
+}
+.progress-bar {
+  background: #d4315c;
+}
+.progress-bar-2 {
+  background: #484b6d;
+}
+.progress-bar-3 {
+  background: #474c58;
+}
+/* ==========================================================
+! SECTION: PORTFOLIO
+========================================================== */
+.portfolio .line-content {
+  height: 255px;
+}
+.portfolio-item .hover-bg {
+  background: #b20f3a;
+}
+.bx-prev,
+.bx-next {
+  background: #484b6d;
+}
+.bx-prev:hover,
+.bx-next:hover {
+  color: #fff;
+  background: #15183a;
+}
+/* ==========================================================
+! SECTION: CONTACT
+========================================================== */
+input.form-control,
+textarea.form-control {
+  background: #f6537e;
+  border: 1px solid #e5426d;
+}
+.form-send {
+  background: #484b6d;
+  color: #fff;
+}
+.contact-subtitle-1 {
+  color: #484b6d;
+}
+.modal-content .modal-title {
+  color: #484b6d;
+}
+/* ==========================================================
+! SECTION: THANK YOU
+========================================================== */
+.thank-you {
+  color: #888888;
+}
+/* ==========================================================
+! FOOTER
+========================================================== */
+#footer {
+  background: #474c58;
+  color: #fff;
+}
+#footer p {
+  color: #fff;
+}

@@ -1,0 +1,1062 @@
+/*------------------------------------------------------------------
+[Main Theme Styles]
+
+Project:	Vertica - Retina Ready Resume / CV & Portfolio
+Author:	Diego Pereira @ DotRex
+Version:	1.1
+Last change:	08/08/14 
+Primary use:	CV / Resume
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. General
+2. Tipography
+3. Page loader
+4. Header colors
+5. Side Menu
+6. Content
+7. Profile intro
+8. Vertical Timeline
+9. Section: Education and Work Experience
+10. Section: Skills
+11. Section: Portfolio
+12. Section: Contact
+13. Section: Thank you
+14. Footer
+15. Other Stuff
+16. Crossbrowser Stuff
+-------------------------------------------------------------------*/
+
+/* ==========================================================
+! 1. General 
+========================================================== */	
+@import "variables.less";
+
+body {
+	.font1;
+	background-image: url('../img/background2.jpg');
+	//background: #111;
+	background-attachment: fixed;
+	background-repeat: repeat-x;
+	background-color: @color2;
+	background-position: center top;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative !important;
+  padding: 10px;
+  @media @mobile {
+  	background-image: none;
+  }
+}
+
+@media @laptop {
+	padding: 0px;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+hr {
+	border: 0;
+}
+
+h1, h2 {
+	color: @color1;
+	margin-top: 0;
+}
+
+h3 {
+	color: @color2;
+}
+
+.btn {
+	margin-right: 3px;
+	.anima(0.3s);
+	height: 30px;
+	line-height: 30px;
+	padding-top: 0;
+	&:hover {
+		.btn-hide-text {
+			width: 125px;
+			padding-left: 6px;
+		}
+	}
+}
+
+.btn-top-message {
+	&:hover {
+		.btn-hide-text {
+			width: 105px;
+			padding-left: 6px;
+		}
+	}
+}
+.btn-default {
+	background: @color2;
+	color: @bgcolor;
+	border: @color2;	
+	&:hover {
+		background: @color2 - #222!important;
+		color: @bgcolor;
+	}
+}
+
+.btn-primary {
+	background: @color1;
+	border: @color1;
+	color: @bgcolor;
+	&:hover {
+		background: @color1 - #111!important;
+		color: @bgcolor;
+	}
+}
+
+.btn-secondary {
+	background: @color3;
+	border: @color3;
+	color: @bgcolor;
+	&:hover {
+		background: @color3 - #111!important;
+		color: @bgcolor;
+	}
+}
+
+.btn-hide-text {
+	display: inline-block;
+	width: 0;
+	overflow: hidden;
+	.anima(0.3s);
+	text-align: left;
+	line-height: 30px;
+	vertical-align: middle;
+	text-transform: uppercase;
+	font-size: 10px;
+}
+
+.nicescroll-rails {
+	z-index: 9999!important;
+}
+
+.line-content {
+	opacity: 1;
+}
+
+/* ==========================================================
+! 2. Tipography
+========================================================== */	
+
+p {
+	color: @textcolor;
+}
+
+.profile-intro {
+	p {
+		font-size: 16px;
+		text-align: center;
+		@media @tablet {
+			text-align: left;
+			font-size: 14px;
+		}
+	}
+}
+
+
+.intro-title1 {
+	font-size: 36px;
+	color: @textcolor - #111;
+	letter-spacing: -1pt;
+	border-bottom: 1px solid @color1;
+	padding-bottom: 10px;
+	font-weight: 200;
+	margin-top: 15px;
+	text-align: center;
+	@media @tablet {
+		text-align: left;		
+		font-size: 40px;
+	}
+	@media @laptop {
+		margin-top: 0;
+		font-size: 54px;
+	}
+}
+
+.intro-title2 {
+	font-size: 18px;
+	color: @textcolor + #222;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	text-align: center;
+	@media @tablet {
+		font-size: 20px;
+		text-align: left;
+	}
+}
+
+.section-title {
+	text-transform: uppercase;
+	color: @color2 - #111;
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 40px;
+	padding-bottom: 20px;	
+	@media @laptop {
+		margin-left: -15px;
+	}
+	@media @desktop {
+		margin-left: -35px;
+	}
+}
+
+.section-item-title-1 {
+	color: @color2;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 5px;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 20px;
+	margin-top: 14px;
+}
+
+/* ==========================================================
+! 3. Page loader
+========================================================== */	
+#page-loader {
+	width: 100%;
+	height: 100%;
+	background: @color2 - #111;
+	color: @color1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+
+}
+
+.loading-wrapper {
+	width: 250px;
+	position: fixed;
+	top: 40%;
+	left: 50%;
+	margin-left: -125px;
+}
+
+
+.tp-loader 	{	  
+	z-index:10000; 
+	position:relative;
+}
+
+			
+.tp-loader.spinner {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);  
+  -webkit-animation: tp-rotateplane 1.2s infinite ease-in-out;
+  animation: tp-rotateplane 1.2s infinite ease-in-out;
+  border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+
+
+@-webkit-keyframes tp-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+}
+
+@keyframes tp-rotateplane {
+  0% { 
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+  } 50% { 
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+  }
+}
+
+/* ==========================================================
+! 4. Header-colors
+========================================================== */	
+.top-colors {
+ padding: 0 !important;
+}
+
+.top-color {
+	height: 8px;
+	width: 20%;
+	float: left;
+	background: @color1;
+}
+
+.top-color1 {
+	background: @color1;
+}
+
+.top-color2 {
+	background: @color2;
+}
+
+.top-color3 {
+	background: @color3;
+}
+
+/* ==========================================================
+! 5. Side Menu
+========================================================== */	
+.side-menu-open {
+	position: fixed;
+	left: 0;
+	height: 100%;
+	cursor: pointer;
+	z-index:777;
+}
+
+.side-menu-button {	
+	font-weight: bold;	
+	display: block;
+	top: 80px;
+	margin-top: 40px;
+	height: 60px;
+	line-height: 60px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background: #333;
+	.border-radius(0);
+	opacity: 0.9;
+}
+
+.side-menu {
+	position: fixed;
+	top: 0;
+	left: -250px;
+	width: 250px;
+	height: 100%;
+	background: #111;
+	color: @bgcolor;
+	padding: 60px 22px;
+	z-index: 888;
+	opacity: 0.9;
+	a {
+		color: @bgcolor;
+	}
+	p {
+		color: @bgcolor;
+	}
+}
+
+.side-menu-nav {
+	list-style: none;
+	width: 100%;
+	margin-bottom: 45px;
+	li {
+		display: block;
+		width: 100%;
+		font-size: 14px;
+		border-bottom: 1px dotted @bgcolor - #999;
+		background: none !important;
+		a {
+			color: @bgcolor - #222;
+			background: none !important;
+			display: block;
+			width: 100%;
+			font-weight: 200;
+			height: 35px;
+			line-height: 35px;
+			padding: 0 !important;
+			text-transform: uppercase;
+			.anima(0.3s);
+			&:hover {
+				padding-left: 5px!important;
+				color: #fff;
+				font-weight: 300;
+				text-decoration: none;
+			}
+		}
+	}
+	li.active {
+		a {
+			padding-left: 5px!important;
+			color: #fff;
+			font-weight: 300;
+			text-decoration: none;
+			background: none!important;
+		}
+	}
+}
+
+.nav >li >a {
+	padding: 0;
+	&:hover {
+		background: none;
+	}
+}
+
+.side-menu-name {
+	border: 2px solid @bgcolor;
+	color: @bgcolor;
+	opacity: 0.9;
+	text-align: center;
+	font-size: 22px;
+	text-transform: uppercase;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	font-weight: 200;
+	
+}
+
+.side-menu-job {
+	margin-bottom: 40px;
+	text-align: center;
+	font-weight: 200;
+	font-size: 12px;
+	margin-top: 5px;
+	color: @bgcolor - #222;
+}
+
+
+#side-menu-close {
+	font-size: 18px;
+	color: #fff;
+	opacity: 0.5;
+	.anima(0.2s);
+	position: absolute;
+	right: 8px;
+	top: 3px;
+	cursor: pointer;
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.btn-side-menu {
+	display: block;
+	width: 100%;
+	text-align: center;
+	background: none;
+	border: 1px solid @bgcolor + #555;
+	.border-radius(0);
+	height: 40px;
+	line-height: 40px;
+	margin-bottom: 8px;
+	text-transform: uppercase;
+	font-weight: 200;
+	font-size: 10px;
+	.anima(0.2s);
+	&:hover {
+		background: @bgcolor + #555;
+		opacity: 0.8;
+	}
+}
+
+.side-menu-buttons {}
+
+/* ==========================================================
+! 6. Content
+========================================================== */	
+#content-body {
+	margin-top: 10px;	
+	margin-bottom: 10px;	
+	position: relative;
+	@media @laptop {
+		margin-top: 45px;	
+		margin-bottom: 90px;
+	}
+	@media @desktop {	
+		margin-bottom: 200px;
+	}
+}
+
+.header-buttons {
+	text-align: right;
+	padding-top: 15px;
+}
+
+
+.resume-container {
+	background: url('../img/paper-bg2.png') no-repeat top left,
+	url('../img/paper-bg-bot.png') no-repeat bottom right, @bgcolor;
+}
+
+/* ==========================================================
+! 7. Profile intro
+========================================================== */	
+.profile-intro {
+	margin-top: 50px;
+	position: relative;
+	z-index: 99;
+	@media @laptop {
+		height: 245px;
+	}
+}
+
+.profile-pic {
+	text-align: center;
+	.border-radius(100%);
+	width: 210px;
+	height: 210px;
+	border: 5px solid @color1;
+	overflow: hidden;
+	margin: 0 auto;
+	background: @bgcolor;
+	img {
+		width: 188px;
+		height: 188px;
+		margin-top: 6px;
+		.border-radius(100%);
+		overflow: hidden;
+		.anima(0.3s);
+		&:hover {
+		}
+	}	
+}
+
+/* ==========================================================
+! 8. Vertical Timeline
+========================================================== */	
+.timeline-wrap	{
+	background: @color1;
+	position: relative;
+	z-index: 88;
+	@media @laptop {
+		top: -44px;
+	}
+}
+
+.timeline-bg {
+	background: @bgcolor;
+	@media @laptop {
+		background: url('../img/timeline-bg.png') repeat-x center center fixed;
+	}
+}
+
+.bg1 {
+	background: @bgcolor;
+}
+
+
+.timeline-progress {
+	background: url('../img/progress-bar.png') repeat-y center;
+	background-size: 400px 9px;
+}
+
+.timeline-point {
+	background: url('../img/progress-point.png') center center;
+	background-size: 400px 500px;
+}
+
+.timeline-education {
+	background: url('../img/progress-education4.png') no-repeat center center;
+	background-size: 400px 500px;
+}
+
+.timeline-work {
+	background: url('../img/progress-work3.png') no-repeat center center;
+	background-size: 400px 500px;
+}
+
+.timeline-mail {
+	background: url('../img/progress-mail3.png') no-repeat center center;
+	background-size: 400px 500px;
+}
+
+
+.timeline-title {
+	background: url('../img/progress-section-title3.png') no-repeat center center;
+	background-size: 400px 500px;
+}
+
+.timeline-margin {
+
+}
+.timeline-margin .content-wrap {	
+	height: 40px;
+	@media @laptop {
+		height: 80px;
+	}
+}
+
+.timeline-margin-big {
+	.content-wrap {
+		@media @laptop {
+			height: 260px;
+		}		
+	}	
+}
+
+.line-content {
+	color: @textcolor;
+	font-size: 16px;
+	@media @laptop {
+		margin-left: -15px;
+	}
+	@media @desktop {
+		margin-left: -35px;
+	}
+	p {
+		font-size: 14px;
+	}
+}
+
+/* ==========================================================
+! 9. Section: Education and Work Experience
+========================================================== */	
+.line-content-education {	
+	padding-bottom: 10px;
+	@media @laptop {
+		min-height: 150px;
+		//padding-bottom: 40px;
+	}
+}
+
+.graduation-time, .job {
+	font-size: 14px;
+	font-weight: bold;
+	color: @textcolor + #444;
+}
+
+.graduation-date, .job-date {
+	font-size: 14px;
+	font-style: italic;
+	font-weight: 200;
+}
+
+.graduation-description, .job-description {
+	font-size: 13px;	
+	p {
+		font-size: 13px;
+		line-height: 19px;
+	}
+}
+
+/* ==========================================================
+! 10. Section: Skills
+========================================================== */	
+.progress {
+    position: relative;
+	height: 25px;
+}
+.progress > .progress-type {
+	position: absolute;
+	left: 0px;
+	font-size: 13px;
+	padding: 3px 30px 2px 10px;
+	color: rgb(255, 255, 255);
+	background-color: rgba(25, 25, 25, 0.2);
+}
+.progress > .progress-completed {
+	position: absolute;
+	right: 0px;
+	font-weight: 800;
+	padding: 3px 10px 2px;
+	color: #888;
+	font-size: 14px;
+}
+
+.skills-list {
+	list-style: none;
+}
+
+.progress-bar {
+	background: @color1;
+	width: 20%;
+}
+
+.progress-bar-2 {
+	background: @color2;
+}
+
+.progress-bar-3 {
+	background: @color3;
+}
+
+/* ==========================================================
+! 11. Section: Portfolio
+========================================================== */
+.portfolio {
+	.line-content {
+		height: 255px;
+	}
+}
+
+.portfolio-item {
+	position: relative;
+	cursor:crosshair!important;
+	width: 200px;
+	height: 180px;
+	overflow: hidden;
+	background: none;
+	&:hover {
+		.hover-bg {
+		}
+		.hover {
+		}
+		img {			
+			-webkit-transform: scale(1.2) rotate(-5deg);
+		    -o-transform: scale(1.2) rotate(-5deg);
+		    transform: scale(1.2) rotate(-5deg);
+		}
+	}
+	a {
+		background: none;
+		display: block;
+		cursor:crosshair!important;
+	}
+	img {
+		width: 100%;
+		border-radius: 0;
+		.anima(0.3s);
+	}
+	.hover-bg-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: 5px;
+		z-index: 3;
+		display: none;
+	}
+	.hover-bg {		
+		background: @color1 - #222;		
+		opacity: 0.9;
+		width: 100%;
+		height: 100%;
+		position: relative;
+		min-height: 10px;
+		z-index: 3;
+	}
+	.hover {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: 4;
+		color: #fff;
+		opacity: 1;
+		p {
+			color: #fff;			
+			text-align: center;
+		}
+		p.zoomi {
+			font-size: 56px;			
+		}
+		p.portfolio-item-title {
+			font-size: 12px;
+			text-transform: uppercase;
+			padding-left: 5px;
+			padding-right: 5px;
+			margin-top: 8px;
+			font-weight: 200;
+		}
+		display: none;
+		padding: 20px;
+	}
+}
+.bx-controls-direction {
+	margin-top: 5px;
+	.disabled {
+		opacity: 0.3;
+		cursor: default;
+		background: #333;
+		&:hover {
+			background: #333;
+		}
+	}
+}
+
+.bx-prev, .bx-next {
+	display: inline-block;
+	height: 30px;
+	width: 40px;
+	background: @color2;
+	color: @bgcolor;
+	text-align: center;
+	line-height: 30px;
+	margin-right: 3px;
+	.anima(0.2s);
+	&:hover {
+		color: #fff;
+		background: @color2 - #333;
+	}
+}
+
+/* ==========================================================
+! 12. Section: Contact
+========================================================== */
+.contact-content {
+	padding-bottom: 20px;
+	min-height: 315px;
+}
+
+.contact-form-wrapper {
+	position: relative;
+}
+
+.form-group {
+	margin-bottom: 10px;
+	position: relative;
+	label.error {
+		display: block;
+		position: absolute;
+		right: -10px;
+		top: -3px;
+		background: #333;
+		padding: 5px;
+		color: #fff;
+		font-weight: normal;
+		font-size: 12px;
+		.border-radius(5px);
+	}
+}
+
+input.form-control, textarea.form-control {
+	background: @color1;
+	border: 0px solid @color1 + #111;
+	padding-top: -2px;
+	.border-radius(5px);
+	color: @bgcolor + #111;
+	height: 40px;
+}
+
+textarea.form-control {
+	width: 100% !important;
+	height: 100px!important;
+}
+
+.form-send {
+	margin-top: 10px;
+	font-weight: bold;
+	text-transform: uppercase;
+	.border-radius(5px 5px 5px 5px);
+	min-width: 200px;
+	background: @color2;
+	color: #fff;
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	.anima(0.3s);
+	&:hover {
+		
+	}
+}
+
+::-webkit-input-placeholder {
+   color: @bgcolor  !important;
+   font-style: italic;
+}
+
+:-moz-placeholder { 
+   color: @bgcolor  !important;
+	font-style: italic;
+}
+
+::-moz-placeholder { 
+   color: @bgcolor !important; 
+   font-style: italic;
+}
+
+:-ms-input-placeholder {  
+   color: @bgcolor  !important; 
+   font-style: italic;
+}
+
+.contact-subtitle-1 {
+	text-transform: uppercase;
+	font-weight: bold;
+	color: @color2;
+	font-size: 18px;
+	margin-bottom: 4px;
+	margin-top: 20px;
+	@media @laptop {
+		font-size: 14px;
+		margin-top: 0;
+	}
+}
+
+.contact-infos {
+	font-size: 14px;
+	text-align: center;
+	margin-top: 20px;
+	font-size: 16px;
+	p {
+		font-size: 16px;
+	}
+	@media @laptop {
+		text-align: left;
+		margin-top: 0;
+		font-size: 14px;
+	}
+}
+
+.form-result {
+}
+
+
+.modal-wrap {
+	display: none;
+}
+
+.modal-bg {
+	background: #333;
+	opacity: 0.9;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+}
+
+.modal-content {
+	background: @bgcolor;
+	font-size: 18px;
+	position: fixed;
+	top: 40%;
+	left: 50%;
+	margin-left: -125px;
+	width: 250px;
+	z-index: 9999;
+	padding: 10px 20px;
+	.modal-title {
+		color: @color2;
+		font-size: 22px;
+		border-bottom: 1px solid #ccc;
+		margin-bottom: 5px;	
+		font-weight: bold;	
+	}
+	p {
+		font-size: 14px;
+		margin-bottom: 0;
+	}
+}
+
+#contactError {
+	.modal-title {
+		color: #fff;
+	}
+}
+
+/* ==========================================================
+! 13. Section: Thank you
+========================================================== */
+.line-thank-you {
+	height: 60px;
+}
+
+.thank-you {
+	font-weight: 200;
+	font-size: 67px;
+	line-height: 48px;
+	color: @textcolor + #555;
+	font-style: italic;
+	position: relative;
+	top: -5px;
+	text-align: center;	
+	@media @laptop {
+		text-align: left;
+	}
+}
+
+
+/* ==========================================================
+! 14. Footer
+========================================================== */
+#footer {
+	background: @color3;
+	color: #fff;
+	padding-top: 17px;
+	padding-bottom: 17px;
+	text-align: center;
+	margin-top: 130px;
+	p {
+		color: #fff;
+	}
+	.quote {
+		font-size: 22px;
+		font-weight: 200;
+		margin-bottom: 5px;
+	}
+	.author {
+		font-size: 14px;
+		font-weight: bold;
+	}
+}
+
+/* ==========================================================
+! 15. Other Stuff
+========================================================== */
+
+/*Nivo Lightbox*/
+.nivo-lightbox-theme-default .nivo-lightbox-title {
+font-style: normal;
+font-weight: normal;
+background: #000;
+opacity: 0.9;
+color: #fff;
+padding: 15px 15px;
+border-radius: 5px;
+width: 100%;
+}
+
+.nivo-lightbox-theme-default .nivo-lightbox-title-wrap {
+bottom: 0px;
+}
+
+/* ==========================================================
+! 16. Crossbrowser Stuff
+========================================================== */
+
+/*Safari*/
+.safari {
+	.timeline-bg {
+		//background: @bgcolor;
+		@media @laptop {
+			//background: none;
+		}
+	}
+	.btn {
+		display: inline;
+		padding-top: 5px;
+	}
+	.side-menu-button {
+		display: block;
+	}
+	.form-send {
+		padding-top: 0!important;
+		margin: 0 auto;
+	}
+	.btn-side-menu {
+		display: block;
+		.anima(0s);
+		padding-top: 0;
+		opacity: 1;
+	}
+
+}
+.mac.gecko {
+	.full-height {
+		border-left: 1px solid @bgcolor;
+	}
+	#skills {
+		.line-content {
+			min-height: 170px;
+		}
+	}
+	#portfolio {
+		.line-content {
+			height: 280px;
+		}
+	}
+}
