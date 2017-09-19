@@ -1,3 +1,3 @@
-# akalankauk.github.io
+# Hello! Please Visit To My CV Profile & Blog .
 
-# My Blog :)
+### https://akalankauk.github.io
