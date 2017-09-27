@@ -1,0 +1,120 @@
+.body-wrapper
+  .column.one
+    .user-profile-container
+      .top-div
+        img(id="user-profile-picture" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAjYAAAAJDBkMjZiYzJiLWEyYjgtNDNlZS04MDQ5LTg1NDI1YjVlYzJmMw.jpg")
+      .content-div
+        .name-and-information
+          h1 Charlie Marcotte
+          h2 Web & UX Developer
+        .profile-stats
+          .info-container
+            i(class="glyphicon glyphicon-user")
+            h4 762 Views
+          .info-container
+            i(class="glyphicon glyphicon-info-sign")
+            h4 98 Contacts
+          .info-container
+            i(class="glyphicon glyphicon-pencil")
+            h4 12 Posts
+          .info-container
+            i(class="glyphicon glyphicon-ok")
+            h4 4 Groups
+          .info-container
+            i(class="glyphicon glyphicon-cog")
+            h4 1 Pending
+          .info-container
+            i(class="glyphicon glyphicon-flag")
+            h4 4 Jobs
+  .column.two
+    article.moodle-container
+      .share-container
+        input(type="text" placeholder="Share an article, photo, video, or idea")
+      .action-container
+        button.media-button Write an article
+        button.media-button Image
+        button.media-button Video
+        button.post-button Post
+    article.post-container
+      .post-top-bar
+        p <a href="#" class="name">Charlie Marcotte</a> likes this
+        input(type="checkbox" class="toggle" id="toggleFor")
+        label(id="toggle-info" for="toggleFor")
+        aside.toggle-options
+          h3 Copy link to post
+          h3 Hide this post
+          h3 Unfollow Michael
+          h3 Report this post
+      .profile-title
+        img(src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAjYAAAAJDBkMjZiYzJiLWEyYjgtNDNlZS04MDQ5LTg1NDI1YjVlYzJmMw.jpg")
+        .user-information-container
+          p <a href="#" class="name"> Charlie Marcotte </a>
+          p.job-title UX Designer, Developer, Researcher
+          p.time-stamp 3h
+      .user-text
+        p.custom-text "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+  
+      .bottom-bar-container
+        .bottom-bar-social
+          input(id="like" type="checkbox" placeholder="" name="socialIcon")
+          label(for="like" class="social" id="liked-after") <span class="glyphicon glyphicon-thumbs-up"></span> Like
+          input(id="comment" type="checkbox" placeholder="" name="socialIcon")
+          label(for="comment" class="social") <span class="glyphicon glyphicon-comment"></span> Comment
+          input(id="share" type="checkbox" placeholder="" name="socialIcon")
+          label(for="share" class="social") <span class="glyphicon glyphicon-share-alt	"></span> Share
+          span(class="icon fa fa-facebook-square")
+          span(class="	icon fa fa-twitter-square")
+          span(class="icon 	fa fa-google-plus-square")
+          span(class="	icon fa fa-slack")
+          .comment-box
+            img(src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAjYAAAAJDBkMjZiYzJiLWEyYjgtNDNlZS04MDQ5LTg1NDI1YjVlYzJmMw.jpg")
+            input(type="text" placeholder="Add a comment...")
+  .column.three
+    .news-container
+      input(type="checkbox" id="chevron")
+      label(id="chevronLabel" for="chevron")
+        i(id="arrow" class="glyphicon glyphicon-chevron-down")
+        i(id="arrow-two" class="glyphicon glyphicon-chevron-up")
+      h3 Trending News
+      p.new-paragraph The World is Burning Part 1
+      p.new-paragraph The World is Burning Part 2
+      p.new-paragraph The World is Burning Part 3
+      p.new-paragraph The World is Burning Part 4
+      p.new-paragraph The World is Burning Part 5
+      p.display-none.new-paragraph The World is Burning Part 6
+      p.display-none.new-paragraph The World is Burning Part 7
+      p.display-none.new-paragraph The World is Burning Part 8      
+
+
+  nav
+    a
+      img(src="https://image.flaticon.com/icons/svg/61/61109.svg")
+    .menu-container
+      a.menu-nav#test 
+        i(class="glyphicon glyphicon-home")
+        p Home
+      a.menu-nav
+        i(class="glyphicon glyphicon-random") 
+        p My Network
+      a.menu-nav 
+        i(class="glyphicon glyphicon-user") 
+        p Jobs
+      a.menu-nav
+        i(class="glyphicon glyphicon-envelope") 
+        p Messaging
+      a.menu-nav
+        i(class="glyphicon glyphicon-flag") 
+        p Notifications
+      a.menu-nav
+        img(src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAjYAAAAJDBkMjZiYzJiLWEyYjgtNDNlZS04MDQ5LTg1NDI1YjVlYzJmMw.jpg") 
+        label(for="me-toggle") Me
+        input(id="me-toggle" type="checkbox")
+        .me-information-toggle
+          h3 View Profile
+          h3 Settings & Privacy
+          h3 Help Center
+          h3 Job Postings
+          h3 Sign Out
+          h3 Upgrade to Premimum
+      
